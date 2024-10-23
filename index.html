@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side by Side iFrames</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        .iframe-container {
+            display: flex;
+            height: 100vh;
+        }
+        iframe {
+            flex: 1;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="iframe-container">
+        <iframe src="https://copilotstudio.microsoft.com/environments/Default-4a809fb2-0c7f-4201-95da-06953b7d506f/bots/cr59f_fdaDrugInformationAssistant/webchat?__version__=2" 
+                title="Microsoft Copilot Bot"></iframe>
+        <iframe src="https://widget.botsonic.com/CDN/index.html?service-base-url=https%3A%2F%2Fapi-azure.botsonic.ai&token=2f80188e-c1a2-4718-bc16-a1f0a3ec1d61&base-origin=https%3A%2F%2Fbot.writesonic.com&instance-name=Botsonic&standalone=true&page-url=https%3A%2F%2Fbot.writesonic.com%2Fbots%2F44108b26-894a-4038-99fc-bea22d1c812c%2Fconnect" 
+                title="Botsonic AI Chatbot"></iframe>
+    </div>
+</body>
+</html>
