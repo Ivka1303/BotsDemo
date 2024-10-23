@@ -9,14 +9,17 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            width: 100%;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
         }
         .iframe-container {
             display: flex;
-            height: 100vh;
+            gap: 20px; /* Space between the two iFrames */
         }
         iframe {
-            flex: 1;
+            width: 25vw;   /* 45% of the viewport width */
+            height: 40vh;  /* 60% of the viewport height */
             border: none;
         }
     </style>
