@@ -9,18 +9,20 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center;     /* Center vertically */
+            width: 100%;
         }
         .iframe-container {
             display: flex;
-            gap: 100px; /* Space between the two iFrames */
+            justify-content: center;
+            gap: 20px; /* Space between iFrames */
+            height: 100vh;
+            align-items: center; /* Center iFrames vertically */
         }
         iframe {
-            width: 25vw;   /* 45% of the viewport width */
-            height: 60vh;  /* 60% of the viewport height */
-            border: none;
+            width: 30vw; /* Thinner width (30% of viewport) */
+            height: 60vh; /* Height is 60% of viewport height */
+            border: 3px solid black; /* Dark blue border */
+            border-radius: 5px; /* Optional: slight rounding of corners */
         }
     </style>
 </head>
@@ -30,6 +32,8 @@
                 title="Microsoft Copilot Bot"></iframe>
         <iframe src="https://widget.botsonic.com/CDN/index.html?service-base-url=https%3A%2F%2Fapi-azure.botsonic.ai&token=2f80188e-c1a2-4718-bc16-a1f0a3ec1d61&base-origin=https%3A%2F%2Fbot.writesonic.com&instance-name=Botsonic&standalone=true&page-url=https%3A%2F%2Fbot.writesonic.com%2Fbots%2F44108b26-894a-4038-99fc-bea22d1c812c%2Fconnect" 
                 title="Botsonic AI Chatbot"></iframe>
+        <iframe src="https://webchat.botframework.com/embed/t01bot?s=LPolDAvpX1k.79GNs0IeoWaq5Rl_6gkaR_kKxmyrEDVBacBG4Au6-Cg" 
+                title="Bot Framework Chatbot" style="min-width: 400px;"></iframe>
     </div>
 </body>
 </html>
