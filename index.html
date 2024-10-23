@@ -4,36 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Side by Side iFrames</title>
+    <!-- Link to Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
             width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Inter', sans-serif; /* Apply Inter font to the whole page */
         }
         .iframe-container {
             display: flex;
             justify-content: center;
             gap: 20px; /* Space between iFrames */
-            height: 100vh;
-            align-items: center; /* Center iFrames vertically */
+            align-items: flex-start; /* Align items at the top */
+        }
+        .iframe-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h3 {
+            margin: 10px 0; /* Margin around the titles */
+            text-align: center;
+            font-weight: 500; /* Use medium weight for the titles */
         }
         iframe {
             width: 30vw; /* Thinner width (30% of viewport) */
             height: 60vh; /* Height is 60% of viewport height */
-            border: 1px solid black; /* Dark blue border */
-            border-radius: 5px; /* Optional: slight rounding of corners */
+            border: 1px solid black; 
+            border-radius: 5px; /* Slight rounding of corners */
         }
     </style>
 </head>
 <body>
     <div class="iframe-container">
-        <iframe src="https://copilotstudio.microsoft.com/environments/Default-4a809fb2-0c7f-4201-95da-06953b7d506f/bots/cr59f_fdaDrugInformationAssistant/webchat?__version__=2" 
-                title="Microsoft Copilot Bot"></iframe>
-        <iframe src="https://widget.botsonic.com/CDN/index.html?service-base-url=https%3A%2F%2Fapi-azure.botsonic.ai&token=2f80188e-c1a2-4718-bc16-a1f0a3ec1d61&base-origin=https%3A%2F%2Fbot.writesonic.com&instance-name=Botsonic&standalone=true&page-url=https%3A%2F%2Fbot.writesonic.com%2Fbots%2F44108b26-894a-4038-99fc-bea22d1c812c%2Fconnect" 
-                title="Botsonic AI Chatbot"></iframe>
-        <iframe src="https://webchat.botframework.com/embed/t01bot?s=LPolDAvpX1k.79GNs0IeoWaq5Rl_6gkaR_kKxmyrEDVBacBG4Au6-Cg" 
-                title="Bot Framework Chatbot" style="min-width: 400px;"></iframe>
+        <div class="iframe-wrapper">
+            <h3>Microsoft Copilot Bot</h3>
+            <iframe src="https://copilotstudio.microsoft.com/environments/Default-4a809fb2-0c7f-4201-95da-06953b7d506f/bots/cr59f_fdaDrugInformationAssistant/webchat?__version__=2" 
+                    title="Microsoft Copilot Bot"></iframe>
+        </div>
+        <div class="iframe-wrapper">
+            <h3>Botsonic AI Chatbot</h3>
+            <iframe src="https://widget.botsonic.com/CDN/index.html?service-base-url=https%3A%2F%2Fapi-azure.botsonic.ai&token=2f80188e-c1a2-4718-bc16-a1f0a3ec1d61&base-origin=https%3A%2F%2Fbot.writesonic.com&instance-name=Botsonic&standalone=true&page-url=https%3A%2F%2Fbot.writesonic.com%2Fbots%2F44108b26-894a-4038-99fc-bea22d1c812c%2Fconnect" 
+                    title="Botsonic AI Chatbot"></iframe>
+        </div>
+        <div class="iframe-wrapper">
+            <h3>Bot Framework Chatbot</h3>
+            <iframe src="https://webchat.botframework.com/embed/t01bot?s=LPolDAvpX1k.79GNs0IeoWaq5Rl_6gkaR_kKxmyrEDVBacBG4Au6-Cg" 
+                    title="Bot Framework Chatbot"></iframe>
+        </div>
     </div>
 </body>
 </html>
